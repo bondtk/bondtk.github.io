@@ -130,7 +130,9 @@ p { font-size: 1.05rem; color: var(--ink); }
   color: var(--cream);
 }
 
-.on-dark h1, .on-dark h2, .on-dark h3, .on-dark h4 { color: var(--cream); }
+.on-dark h1 { color: var(--cream); }
+.on-dark h2, .on-dark h3 { color: var(--yellow); }
+.on-dark h4 { color: var(--cream); }
 .on-dark p { color: var(--ink-soft); }
 
 .on-brand {
