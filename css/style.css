@@ -367,6 +367,15 @@ p { font-size: 1.05rem; color: var(--ink); }
   color: var(--ink-faint);
 }
 
+.app-card-img {
+  width: calc(100% + 2 * var(--sp-4));
+  margin: calc(-1 * var(--sp-4)) calc(-1 * var(--sp-4)) var(--sp-3);
+  border-radius: var(--radius-md) var(--radius-md) 0 0;
+  display: block;
+  aspect-ratio: 5/2;
+  object-fit: cover;
+}
+
 /* ---------- Hero ---------- */
 .hero {
   padding: var(--sp-7) 0 var(--sp-6);
@@ -488,6 +497,29 @@ body:not(.on-dark-page) .shot-placeholder {
   border-color: rgba(91,42,157,0.3);
   background: var(--cream-dim);
   color: var(--ink-faint);
+}
+
+/* Real screenshots */
+.shot-img {
+  width: 100%;
+  border-radius: var(--radius-lg);
+  display: block;
+  box-shadow: var(--shadow-lift);
+}
+
+/* Landscape screenshots (Apple TV) */
+.shot-row--landscape {
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+/* App banner image (hero area) */
+.app-banner-img {
+  width: 100%;
+  max-width: 820px;
+  border-radius: var(--radius-lg);
+  display: block;
+  margin: var(--sp-4) auto 0;
+  box-shadow: var(--shadow-lift);
 }
 
 /* ---------- Forms ---------- */
