@@ -636,7 +636,8 @@ body:not(.on-dark-page) .shot-placeholder {
   margin-bottom: var(--sp-2);
 }
 
-.app-header .stamp--app { width: 80px; height: 80px; font-size: 2rem; }
+.app-header .stamp--app { width: 80px; height: 80px; font-size: 2rem; overflow: hidden; padding: 0; }
+.stamp--app img { width: 100%; height: 100%; object-fit: cover; display: block; }
 
 .pending-badge {
   display: inline-flex;
