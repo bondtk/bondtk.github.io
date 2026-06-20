@@ -367,11 +367,15 @@ p { font-size: 1.05rem; color: var(--ink); }
   color: var(--ink-faint);
 }
 
+/* Cards with banner images — zero padding on card, image fills top naturally */
+.app-card--with-img {
+  padding: 0;
+  overflow: hidden; /* clips image corners to card border-radius */
+}
+
 .app-card-img-wrap {
-  margin: calc(-1 * var(--sp-4)) calc(-1 * var(--sp-4)) var(--sp-3);
-  border-radius: var(--radius-md) var(--radius-md) 0 0;
-  overflow: hidden;
   height: 170px;
+  width: 100%;
 }
 
 .app-card-img {
@@ -380,6 +384,13 @@ p { font-size: 1.05rem; color: var(--ink); }
   display: block;
   object-fit: cover;
   object-position: center;
+}
+
+.app-card-body {
+  padding: var(--sp-4);
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-2);
 }
 
 /* ---------- Hero photo ---------- */
@@ -391,8 +402,8 @@ p { font-size: 1.05rem; color: var(--ink); }
 }
 
 .hero-photo {
-  width: 260px;
-  height: 260px;
+  width: 320px;
+  height: 320px;
   border-radius: 50%;
   object-fit: cover;
   object-position: top center;
