@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact — Bond.dev</title>
+<meta name="description" content="Get in touch with Troy Bond about app support, questions, or freelance app development projects.">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<nav class="site-nav">
+  <div class="wrap">
+    <a href="index.html" class="brand">bond<span class="dot">.</span>dev</a>
+    <button class="nav-toggle" aria-label="Toggle menu">☰</button>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="apps.html">Apps</a>
+      <a href="contact.html" class="active">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero on-brand" style="padding-bottom: 2.5rem;">
+  <div class="wrap">
+    <p class="eyebrow">Contact</p>
+    <h1>Let's talk.</h1>
+    <p class="lede max-w-text">Whether you've got a question about one of my apps, want to report an issue, or are exploring a freelance project — I'd love to hear from you.</p>
+  </div>
+</header>
+
+<section class="section">
+  <div class="wrap">
+    <div class="split" style="align-items: flex-start;">
+
+      <div class="card">
+        <form id="contact-form" action="https://formspree.io/f/mrevnkra" method="POST">
+          <div class="form-field">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required>
+          </div>
+          <div class="form-field">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+          </div>
+          <div class="form-field">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" required></textarea>
+          </div>
+          <input type="hidden" name="_subject" value="New message from bond.dev">
+          <button type="submit" class="btn btn--primary">Send Message</button>
+          <p class="form-note">I'll get back to you as soon as I can.</p>
+        </form>
+        <div class="form-success" id="form-success">
+          Thanks for reaching out! Your message is on its way — I'll be in touch soon.
+        </div>
+      </div>
+
+      <div>
+        <h3 class="mb-2">Prefer email?</h3>
+        <p class="mb-3">Reach me directly at:</p>
+        <a href="mailto:bondtk@gmail.com" class="btn btn--accent">bondtk@gmail.com</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <a href="index.html" class="brand">bond<span class="dot">.</span>dev</a>
+    <div class="footer-links">
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="apps.html">Apps</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <p class="footer-fine">© 2026 Troy Bond. All rights reserved.</p>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+<script>
+  // Submit the contact form via fetch so we can show an inline success message
+  // instead of redirecting away to Formspree's default thank-you page.
+  document.addEventListener('DOMContentLoaded', function () {
+    var form = document.getElementById('contact-form');
+    var success = document.getElementById('form-success');
+    if (!form) return;
+
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      var data = new FormData(form);
+
+      fetch(form.action, {
+        method: 'POST',
+        body: data,
+        headers: { 'Accept': 'application/json' }
+      }).then(function (response) {
+        if (response.ok) {
+          form.style.display = 'none';
+          success.classList.add('show');
+        } else {
+          alert('Something went wrong sending your message. Please try emailing bondtk@gmail.com directly.');
+        }
+      }).catch(function () {
+        alert('Something went wrong sending your message. Please try emailing bondtk@gmail.com directly.');
+      });
+    });
+  });
+</script>
+</body>
+</html>
