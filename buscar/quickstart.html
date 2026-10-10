@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en" class="web">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>BuscAR Hunt Quick Start</title>
+<meta name="description" content="Join a BuscAR Hunt in seconds, or host one in about half an hour. A one-page quick start for players and hosts.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700;9..144,800&family=DM+Sans:wght@400;500;700&display=swap">
+<style>
+:root{--navy:#140A3C;--navy2:#241660;--purple:#5B2FB5;--lav:#EFE9FB;--line:#DCD2EF;--gold:#E8B33A;--goldlt:#FDF1CF;--cream:#FBF7EE;--ink:#1B1633;--sub:#5A5275;--red:#B3261E;--redlt:#FCE9E7}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:#E9E3F5;color:var(--ink);font:13px/1.45 'DM Sans',system-ui,sans-serif}
+.sheet{max-width:816px;margin:0 auto;background:var(--cream);position:relative;overflow:hidden}
+.sheet *{margin:0}
+.hd{background:radial-gradient(ellipse at 20% 0%,#4B2A9B 0%,#241660 50%,#0F0830 100%);color:#fff;padding:22px 32px 18px;display:flex;gap:18px;align-items:center;position:relative}
+.hd:before{content:"";position:absolute;left:0;top:0;right:0;height:6px;background:linear-gradient(90deg,#E8B33A,#5B2FB5)}
+.hd img{width:70px;height:70px;border-radius:16px;box-shadow:0 6px 16px rgba(0,0,0,.45);flex:none}
+.hd h1{font:800 34px/1 'Fraunces',Georgia,serif;color:#fff;display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+.hd .qs{font:700 12px 'DM Sans';letter-spacing:.16em;text-transform:uppercase;background:var(--gold);color:var(--navy);border-radius:999px;padding:4px 12px}
+.hd p{margin-top:8px;font-size:15px;color:#E6DEF8}
+.pre{display:flex;flex-wrap:wrap;gap:6px 18px;justify-content:center;background:var(--navy);color:#DCD2EF;font-size:12px;padding:7px 20px}
+.pre b{color:var(--gold)}
+.main{padding:16px 32px 0}
+.cols{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.col{background:#fff;border:1px solid var(--line);border-radius:14px;padding:14px 14px 12px}
+.top{display:flex;gap:10px;justify-content:space-between;align-items:flex-start;margin-bottom:8px}
+.top .t{flex:1;min-width:0}
+.sec{display:inline-block;background:var(--navy);color:var(--gold);font-size:11px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;border-radius:6px;padding:2px 9px;margin-bottom:6px}
+h2{font:700 21px/1.15 'Fraunces',Georgia,serif;color:var(--navy);margin-bottom:5px}
+.top .t p{font-size:12px;color:var(--sub);line-height:1.4}
+.ph{width:90px;flex:none;border:4px solid var(--navy);border-radius:17px;background:var(--navy);box-shadow:0 5px 12px rgba(20,10,60,.25)}
+.ph img{display:block;width:100%;height:auto;border-radius:13px;aspect-ratio:300/649;object-fit:cover;object-position:top}
+.ph-wrap{width:90px;flex:none;text-align:center}
+.cap{font-size:11.5px;color:var(--sub);margin-top:4px;line-height:1.2}
+ol{list-style:none;padding:0;display:flex;flex-direction:column;gap:6px}
+li{display:flex;gap:8px;align-items:flex-start;font-size:12.5px;line-height:1.35}
+.n{flex:none;width:20px;height:20px;border-radius:50%;background:var(--purple);color:#fff;font-weight:800;font-size:11.5px;display:flex;align-items:center;justify-content:center;margin-top:1px}
+li span{flex:1}
+.note{margin-top:8px;font-size:12px;color:var(--sub)}
+.row2{margin-top:12px;display:flex;flex-direction:column;gap:10px}
+.box{border-radius:12px;padding:8px 12px;font-size:12px;line-height:1.4}
+.box b.l{display:inline-block;font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;border-radius:6px;padding:1px 7px;margin-right:5px;font-weight:800}
+.note-b{background:var(--lav)}.note-b b.l{background:var(--purple);color:#fff}
+.tips{display:grid;grid-template-columns:repeat(5,1fr);gap:8px}
+.tips .box{background:var(--goldlt);padding:8px 9px;font-size:11.5px}
+.tips .box b{display:block;font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:#7A4F00;margin-bottom:2px}
+h3{font:700 15px/1.2 'Fraunces',Georgia,serif;color:var(--navy);margin-bottom:5px}
+.stuck{background:var(--navy);color:#EDE8FA;border-radius:14px;padding:10px 14px}
+.stuck h3{color:var(--gold)}
+.stuck .g{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;font-size:12px}
+.stuck .g b{color:#fff;display:block}
+.line{font-size:12px;color:var(--sub);text-align:center}
+.ft{margin-top:10px;padding:8px 32px 10px;border-top:1px solid var(--line);display:flex;gap:16px;justify-content:space-between;align-items:center;font-size:11.5px;color:var(--sub)}
+.ft b{color:var(--ink)}
+.ft a{color:var(--purple);font-weight:700}
+.ft .qr{width:54px;height:54px;border-radius:8px;flex:none}
+.dl{display:inline-block;margin-top:10px;background:var(--gold);color:var(--navy)!important;font-weight:800;text-decoration:none;border-radius:999px;padding:8px 16px}
+.dlwrap{text-align:center;padding:12px 20px 4px}
+.sheet a{color:var(--purple)}
+
+.snav{background:#14102B;color:#fff;font:14px/1 'DM Sans',system-ui,sans-serif}
+.snav .in{max-width:816px;margin:0 auto;padding:12px 18px;display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
+.snav a{color:#fff;text-decoration:none;font-weight:700}.snav .links a{margin-left:16px;font-weight:500;opacity:.9}.snav a:hover{text-decoration:underline}
+.sfoot{max-width:816px;margin:0 auto;padding:14px 18px 22px;font:12.5px 'DM Sans',system-ui,sans-serif;color:#5A5275;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.sfoot a{color:var(--purple);font-weight:700}
+html.print .snav,html.print .sfoot{display:none}
+/* mobile */
+@media (max-width:640px){
+ .hd{padding:20px 18px 16px;gap:12px}.hd h1{font-size:28px}.hd img{width:56px;height:56px}
+ .main{padding:14px 14px 0}.cols{grid-template-columns:minmax(0,1fr)}.col{min-width:0}.hd>div{min-width:0}
+ .tips{grid-template-columns:repeat(2,minmax(0,1fr))}.stuck .g{grid-template-columns:1fr;gap:8px}
+ li{font-size:14px}.n{width:22px;height:22px}.top .t p,.note,.box,.tips .box,.stuck .g{font-size:13.5px}
+ .ph,.ph-wrap{width:104px}.ft{flex-direction:column;align-items:flex-start;padding:12px 18px 18px}
+ .pre{font-size:13px}
+}
+/* print-fixed (PDF) */
+@page{size:816px 1056px;margin:0}
+html.print body{background:#fff}
+html.print .sheet{width:816px;height:1056px;max-width:none}
+html.print .dlwrap{display:none}
+html.print .ft{position:absolute;left:0;right:0;bottom:0}
+</style>
+</head>
+<body>
+<nav class="snav" aria-label="Site"><div class="in"><a href="../index.html">bond.dev</a><span class="links"><a href="../buscar-hunt.html">BuscAR Hunt</a><a href="../apps.html">Apps</a><a href="../contact.html">Contact</a></span></div></nav>
+<div class="sheet">
+<header class="hd">
+<img src="images/icon.png" alt="BuscAR Hunt app icon" width="70" height="70">
+<div><h1>BuscAR Hunt <span class="qs">Quick Start</span></h1>
+<p>Join a hunt in seconds, or host one in about half an hour.</p></div>
+</header>
+<div class="pre"><span><b>Before you start:</b></span><span>iPhone with iOS 17 or newer</span><span>·</span><span>Camera allowed</span><span>·</span><span>Wi-Fi or mobile data</span></div>
+<div class="main">
+<div class="cols">
+<section class="col" aria-labelledby="pl">
+<div class="top"><div class="t"><span class="sec">Players</span><h2 id="pl">Join the fun</h2><p><b>No account, no purchase.</b> Just the free app and a room code from your host.</p></div>
+<div class="ph-wrap"><div class="ph"><img src="images/player.jpg" alt="The BuscAR Hunt Home screen with Join a hunt" width="300" height="649"></div><div class="cap">Home screen</div></div></div>
+<ol>
+<li><i class="n">1</i><span>Open the free app and tap <b>Join a hunt</b> on Home.</span></li>
+<li><i class="n">2</i><span>Scan the host's QR code, or type the 5-character room code (like FOX-42).</span></li>
+<li><i class="n">3</i><span>Pick your color, type your name, tap <b>Enter the hunt</b>.</span></li>
+<li><i class="n">4</i><span>Wait for the host to tap <b>Start</b>. Everyone begins together.</span></li>
+<li><i class="n">5</i><span>Read the clue, walk to the place, tap <b>I'm at the spot — scan the code</b> and point your camera at the printed card.</span></li>
+<li><i class="n">6</i><span>Tap the glowing AR object, solve the puzzle, collect items and vault marks. A wrong answer just lets you try again.</span></li>
+<li><i class="n">7</i><span>Finish first, or score the most, depending on the host's win mode.</span></li>
+</ol>
+</section>
+<section class="col" aria-labelledby="ho">
+<div class="top"><div class="t"><span class="sec">Hosts</span><h2 id="ho">Run the game</h2><p>Plan roughly <b>30–45 minutes</b> the first time for an 11-station hunt.</p></div>
+<div class="ph-wrap"><div class="ph"><img src="images/host.jpg" alt="The join lobby screen" width="300" height="649"></div><div class="cap">Join lobby</div></div></div>
+<ol>
+<li><i class="n">1</i><span>Buy the hunt in the <b>Store</b> tab (one-time purchase). <b>Sign in with Apple</b> when you tap Host a hunt.</span></li>
+<li><i class="n">2</i><span><b>Host a hunt:</b> pick the hunt, max players, win mode (Race or Score) and an optional timer.</span></li>
+<li><i class="n">3</i><span><b>Station codes:</b> tap the share icon, print at <b>Actual Size / 100%</b>, tape each card where its station lives.</span></li>
+<li><i class="n">4</i><span><b>Place AR objects:</b> point at each card, tap to place, <b>Save this spot</b>. About 1–2 minutes per station.</span></li>
+<li><i class="n">5</i><span>Optional <b>Proceed to</b> lines tell players where in your space to go.</span></li>
+<li><i class="n">6</i><span><b>Open the join lobby</b>, put the join poster on the wall, let guests join.</span></li>
+<li><i class="n">7</i><span>Tap <b>Start</b>. Watch the Host Monitor; <b>End game</b> is there if you need it.</span></li>
+</ol>
+</section>
+</div>
+<div class="row2">
+<div class="box note-b"><b class="l">Good to know</b>Family and Adult narration is a per-phone switch on the clue screen: tap the <b>Family mode</b> pill to change your own tone.</div>
+<div class="tips" role="list" aria-label="Top 5 host tips">
+<div class="box" role="listitem"><b>1 · Print true</b>Print cards at 100%. QR codes are 8 cm.</div>
+<div class="box" role="listitem"><b>2 · Matte paper</b>Glossy prints reflect light and won't scan.</div>
+<div class="box" role="listitem"><b>3 · Tape flat</b>Flat, at eye level, on a firm surface.</div>
+<div class="box" role="listitem"><b>4 · Cards, then AR</b>Place AR objects in good light, after the cards are up.</div>
+<div class="box" role="listitem"><b>5 · Charge up</b>Charge every phone before the party.</div>
+</div>
+<div class="stuck"><h3>Stuck?</h3>
+<div class="g">
+<div><b>QR card won't scan</b>Step back, add light, avoid glare.</div>
+<div><b>AR object doesn't appear</b>Keep the card in view and move slowly.</div>
+<div><b>"This room is full"</b>The host raises the player limit next game.</div>
+</div></div>
+<p class="line">Want to build your own hunt? The Builder is covered in the full guide.</p>
+</div>
+<div class="dlwrap"><a class="dl" href="BuscAR-Hunt-Quick-Start.pdf" download>Download the one-page PDF</a></div>
+</div>
+<footer class="ft">
+<div><b>Full guide:</b> <a href="https://bondtk.github.io/buscar/BuscAR-Hunt-Guide.pdf">bondtk.github.io/buscar/BuscAR-Hunt-Guide.pdf</a><br>Support: <a href="mailto:bondtk@gmail.com">bondtk@gmail.com</a> · <a href="https://bondtk.github.io/contact.html">bondtk.github.io/contact.html</a></div>
+<img class="qr" src="images/guide-qr.png" alt="QR code to the full guide">
+<div>© 2026 Troy Bond</div>
+</footer>
+</div>
+<div class="sfoot"><span>© 2026 Troy Bond. All rights reserved.</span><span><a href="../index.html">Home</a> · <a href="../apps.html">Apps</a> · <a href="../contact.html">Contact</a></span></div>
+</body>
+</html>
